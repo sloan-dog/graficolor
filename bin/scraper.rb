@@ -17,20 +17,33 @@ response = open('./montana_gold.html')
 # Nokogiri parses through html and returns something readable
 document = Nokogiri::HTML(response)
 
-# get montana
-# result_sku = document.css('.color-item.bright span').each do |span|
-  # puts span.text
-# end
-# result_color = document.css('.color-item.bright')[0].parent.styles['background']
-
+# get montana black colors and skus
+paints = Hash.new[]
 document.css('.color-item.bright').each do |item|
-  puts item.css('span').text
-  puts item.parent.styles['background']
+  paint_name = item.css('span').text
+  # take the '#FFFFFF' format and remove the hash
+  filtered = /\w+/.match(item.parent.styles['background']).to_s
+  # puts filtered
+  components = filtered.scan(/.{2}/)
+  # puts components
+  # components = components.map{|component| component.match(/[0-9A-Fa-f]{2}/)}
+  # puts components
+  # components = components.map { |component| component.hex}
+  paints[paint_name=>filtered]
+
+
+
 end
 
 # get colors
-ap result_sku
-ap result_color
+# ap result_sku
+# ap result_color
+
+# white = "FFFFFF"
+# components =  white.scan(/[0-9A-Fa-f]{2}/)
+# components.each do |component|
+#   puts component.hex
+# end
 # $(document).find('.color-item.bright:contains("BLK 1005")').find('span').first().text()
 # "BLK 1005            "
 

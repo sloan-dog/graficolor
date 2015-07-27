@@ -1,4 +1,30 @@
 Rails.application.routes.draw do
+
+  get 'palettes/new'
+
+  get 'palettes/create'
+
+  get 'palettes/show'
+
+  get 'palettes/destroy'
+
+  get 'palettes/index'
+
+  root 'paints#index'
+
+  get 'login' => "sessions#new"
+
+  post 'login' => "sessions#create"
+
+  get 'sessions/destroy'
+
+  get 'signup' => 'users#new'
+
+  post '/signup' => 'users#create'
+
+  resources :users
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

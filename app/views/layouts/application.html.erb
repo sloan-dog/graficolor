@@ -7,6 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= render partial: 'layouts/flash' %>
+<%= link_to 'signup', "signup" %>
+<%= link_to 'login', "login" %>
 
 <%= yield %>
 
