@@ -18,6 +18,8 @@ gem 'pry'
 
 gem 'gon'
 
+gem 'foundation-rails'
+
 # gem 'requirejs-rails'
 
 # Use jquery as the JavaScript library

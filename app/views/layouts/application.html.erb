@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>GraficolorApp</title>
-  <!-- or -->
-  <%= include_gon %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.1/isotope.pkgd.js"></script>
-</head>
-<body>
-<%= render partial: 'layouts/flash' %>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<% if !@current_user %>
-<%= link_to 'signup', "signup" %>
-<%= link_to 'login', "login" %>
-<%= link_to root_path  %>
-<% else %>
-<%= link_to 'logout', 'logout' %>
-<% end %>
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-<%= yield %>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <srcipt src='https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.1/isotope.pkgd.js'></srcipt>
+  </head>
 
-</body>
+  <body>
+
+  <%= render partial: 'layouts/flash' %>
+
+  <% if !@current_user %>
+  <%= link_to 'signup', "signup" %>
+  <%= link_to 'login', "login" %>
+  <%= link_to root_path  %>
+  <% else %>
+  <%= link_to 'logout', 'logout' %>
+  <% end %>
+
+  <%= yield %>
+
+  </body>
 </html>
