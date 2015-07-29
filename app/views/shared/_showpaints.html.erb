@@ -1,6 +1,6 @@
-<% @paints.each do |paint| %>
-<div style="background-color: #<%= paint[:component1] %>" id="<%= paint[:id] %>">
-<%= paint[:name] %>
-<%= paint[:id] %>
+<div class="grid">
+  <% @paints.each do |paint| %>
+    <div class="grid-item" style="background-color: #<%= paint[:component1] %>" id="<%= paint[:id] %>">
+    </div>
+  <% end %>
 </div>
-<% end %>
