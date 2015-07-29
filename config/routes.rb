@@ -2,30 +2,30 @@ Rails.application.routes.draw do
 
   root 'main#index'
 
-  get 'newpalette' => "palettes#new"
+  get 'newpalette' => "palettes#new", as: :palettes
 
-  post 'palettes/create' => "palettes#create"
+  post 'newpalette' => "palettes#create"
+
+  get 'palettes' => "palettes#index"
 
   # get 'palettes/show'
 
   # get 'palettes/destroy'
-
-  get 'thepalettes' => "palettes#index"
 
 
   get 'login' => "sessions#new"
 
   post 'login' => "sessions#create"
 
-  get 'sessions/destroy'
+  get 'logout' => "sessions#destroy"
 
-  get 'signup' => 'users#new'
+  get 'signup' => 'users#new', as: :users
 
-  post '/signup' => 'users#create'
+  post 'signup' => 'users#create'
 
-  resources :users
+  resources :users, only: [:new]
 
-  resources :palettes
+  resources :palettes, only: [:create, :new, :index]
 
   # resources :paints
 

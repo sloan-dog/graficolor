@@ -1,6 +1,10 @@
-<%= link_to 'signup', "signup" %>
-<%= link_to 'login', "login" %>
-<%= link_to root_path  %>
-<% if @current_user.exists? %>
-<%= link_to 'logout', 'logout' %>
+<% if !@current_user %>
+  <%= link_to 'signup', "signup" %>
+  <%= link_to 'login', "login" %>
+  <%= link_to root_path  %>
+  <% else %>
+  <%= link_to 'logout', 'logout' %>
+  <%= link_to 'palettes', 'palettes' %>
+  <%= link_to root_path  %>
 <% end %>
+

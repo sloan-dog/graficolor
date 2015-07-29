@@ -14,16 +14,10 @@
   </head>
 
   <body>
-
+  <%= render partial: 'shared/nav' %>
   <%= render partial: 'layouts/flash' %>
 
-  <% if !@current_user %>
-  <%= link_to 'signup', "signup" %>
-  <%= link_to 'login', "login" %>
-  <%= link_to root_path  %>
-  <% else %>
-  <%= link_to 'logout', 'logout' %>
-  <% end %>
+
 
   <%= yield %>
 
