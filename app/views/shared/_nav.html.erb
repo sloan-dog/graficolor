@@ -1,0 +1,6 @@
+<%= link_to 'signup', "signup" %>
+<%= link_to 'login', "login" %>
+<%= link_to root_path  %>
+<% if @current_user.exists? %>
+<%= link_to 'logout', 'logout' %>
+<% end %>

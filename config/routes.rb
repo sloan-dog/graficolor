@@ -1,16 +1,17 @@
 Rails.application.routes.draw do
 
-  get 'palettes/new'
+  root 'main#index'
 
-  get 'palettes/create'
+  get 'newpalette' => "palettes#new"
 
-  get 'palettes/show'
+  post 'palettes/create' => "palettes#create"
 
-  get 'palettes/destroy'
+  # get 'palettes/show'
 
-  get 'palettes/index'
+  # get 'palettes/destroy'
 
-  root 'paints#index'
+  get 'thepalettes' => "palettes#index"
+
 
   get 'login' => "sessions#new"
 
@@ -23,6 +24,10 @@ Rails.application.routes.draw do
   post '/signup' => 'users#create'
 
   resources :users
+
+  resources :palettes
+
+  # resources :paints
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -2,14 +2,23 @@
 <html>
 <head>
   <title>GraficolorApp</title>
+  <!-- or -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.1/isotope.pkgd.min.js"></script>
+  <%= include_gon %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <%= render partial: 'layouts/flash' %>
+
+<% if !@current_user %>
 <%= link_to 'signup', "signup" %>
 <%= link_to 'login', "login" %>
+<%= link_to root_path  %>
+<% else %>
+<%= link_to 'logout', 'logout' %>
+<% end %>
 
 <%= yield %>
 

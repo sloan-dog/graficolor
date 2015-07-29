@@ -1,0 +1,6 @@
+<% @paints.each do |paint| %>
+<div style="background-color: #<%= paint[:component1] %>" id="<%= paint[:id] %>">
+<%= paint[:name] %>
+<%= paint[:id] %>
+</div>
+<% end %>

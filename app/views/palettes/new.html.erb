@@ -1,2 +1,16 @@
 <h1>Palettes#new</h1>
 <p>Find me in app/views/palettes/new.html.erb</p>
+
+<%= form_for(:palette, :url => palettes_path) do |f| %>
+        <%= f.text_field :name, placeholder: 'Enter a name' %>
+        <%= f.text_area :description, placeholder: 'Enter a description' %>
+        <%= f.hidden_field :paintchoices, id: "hidden_field" %>
+        <%= hidden_field_tag 'selected', 'none'  %><br>
+        <%= f.submit 'Save this palette', id: "save_cullurs" %>
+<% end %>
+
+<div id="paint_list">
+<%= render partial: 'shared/showpaints' %>
+</div>
+<div id='paint_picks'>
+</div>

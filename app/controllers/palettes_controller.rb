@@ -1,11 +1,25 @@
 class PalettesController < ApplicationController
+
+
   def new
     @palette = Palette.new
+    @paints = Paint.all
   end
 
   def create
-    @palette.create palette_params
+    @palette = @current_user.palettes.create(palette_params)
+    if @palette.save
+      redirect_to palettes_path
+    else
+      render :new
+    end
   end
+
+  def index
+    @palettes = current_user.palettes.all
+    # binding.pry
+  end
+
 
   def show
   end
@@ -13,12 +27,10 @@ class PalettesController < ApplicationController
   def destroy
   end
 
-  def index
-
-  end
+  private
 
   def palette_params
-
+    params.require(:palette).permit(:name, :description, :paintchoices)
   end
 
 end

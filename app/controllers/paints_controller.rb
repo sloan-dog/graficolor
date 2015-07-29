@@ -12,7 +12,7 @@ class PaintsController < ApplicationController
   end
 
   def paint_params
-    params.require(:paint).permit(:name,:component1,:brand_id)
+    params.require(:paint).permit(:name,:component1,:brand_id, :id)
   end
 
 end

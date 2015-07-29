@@ -1,2 +1,11 @@
 <h1>Palettes#index</h1>
+
 <p>Find me in app/views/palettes/index.html.erb</p>
+<% @current_user.palettes.each do |palette| %>
+  <%= palette.name %>
+  <% pc = palette.paintchoices.to_s.split(",").map { |p| p.to_i } %>
+  <%= pc %>
+  <% pc.each do |pid| %>
+    <%= @paints. %>
+  <% end %>
+<% end %>
