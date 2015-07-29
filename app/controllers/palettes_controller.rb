@@ -7,7 +7,11 @@ class PalettesController < ApplicationController
   end
 
   def create
+    pc = params[:palette][:paintchoices].split(",").map { |p| p.to_i }
     @palette = @current_user.palettes.create(palette_params)
+    pc.each do |p|
+      @palette.paints << Paint.find_by_id(p)
+    end
     if @palette.save
       redirect_to palettes_path
     else
