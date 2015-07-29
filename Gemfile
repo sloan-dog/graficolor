@@ -18,7 +18,9 @@ gem 'pry'
 
 gem 'gon'
 
-gem 'foundation-rails'
+gem 'materialize-sass'
+
+# gem 'foundation-rails'
 
 # gem 'requirejs-rails'
 

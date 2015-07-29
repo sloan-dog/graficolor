@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'palettes' => "palettes#index"
 
+  get 'edit_palette' => "palettes#edit"
+
   # get 'palettes/show'
 
   # get 'palettes/destroy'
@@ -25,7 +27,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new]
 
-  resources :palettes, only: [:create, :new, :index]
+  resources :palettes
 
   # resources :paints
 

@@ -26,17 +26,22 @@ class PalettesController < ApplicationController
     # binding.pry
   end
 
+  def edit
+    @palette = current_user.palettes(params[:id])
+  end
+
 
   def show
   end
 
   def destroy
+
   end
 
   private
 
   def palette_params
-    params.require(:palette).permit(:name, :description, :paintchoices)
+    params.require(:palette).permit(:name, :description, :paintchoices, :id)
   end
 
 end

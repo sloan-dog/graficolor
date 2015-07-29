@@ -12,9 +12,26 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
 
  */
+
+@import "materialize/components/color";
+$primary-color: color("purple", "lighten-2") !default;
+$secondary-color: color("purple", "lighten-3") !default;
+$link-color: color("cyan", "lighten-3") !default;
+@import 'materialize';
+
+.card a.btn {
+  color:white;
+}
+
+.card-title {
+  margin-left: 25px;
+}
+
+.brand-logo {
+  @extend .card-title;
+}
 
 .grid {
   height:600px;

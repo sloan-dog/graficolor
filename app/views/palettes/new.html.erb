@@ -14,3 +14,30 @@
 
 <div id='paint_picks'>
 </div>
+
+<div class="row">
+        <div class="col s12 m12">
+          <div class="card grey darken-4">
+          <div class="row grey z-depth-0">
+              <span class="card-title"><%= palette.name %></span>
+            </div>
+            <div class="card-content white-text">
+                <% palette.paints.each do |p| %>
+                  <% bc = p.component1 %>
+                  <div class='halign-wrapper picked_paint' style="background-color:#<%= bc %>"></div>
+                <% end %>
+            </div>
+            <div class="card-action">
+              <%= link_to "", edit_palette_path(palette), class: "waves-effect waves-light btn" %>
+              <%= form_for(:palette, :url => palettes_path) do |f| %>
+              <%= f.text_field :name, placeholder: 'Enter a name' %>
+              <%= f.text_area :description, placeholder: 'Enter a description' %>
+              <%= f.hidden_field :paintchoices, id: "hidden_field" %>
+              <%= hidden_field_tag 'selected', 'none'  %><br>
+              <%= f.submit 'Save this palette', id: "save_cullurs" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+</div>
+<% end %>
