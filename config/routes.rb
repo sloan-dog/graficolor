@@ -2,13 +2,15 @@ Rails.application.routes.draw do
 
   root 'main#index'
 
-  get 'newpalette' => "palettes#new", as: :palettes
+  get 'newpalette' => "palettes#new"
 
   post 'newpalette' => "palettes#create"
 
   get 'palettes' => "palettes#index"
 
-  get 'edit_palette' => "palettes#edit"
+  get 'edit_palette/:id' => "palettes#edit", as: "edit_palettes"
+
+  post 'edit_palette/:id' => "palettes#update", as: "edit_palettes"
 
   # get 'palettes/show'
 
@@ -26,8 +28,6 @@ Rails.application.routes.draw do
   post 'signup' => 'users#create'
 
   resources :users, only: [:new]
-
-  resources :palettes
 
   # resources :paints
 

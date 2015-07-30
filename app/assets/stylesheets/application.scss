@@ -34,16 +34,41 @@ $link-color: color("cyan", "lighten-3") !default;
 }
 
 .grid {
-  height:600px;
-  width:600px;
+  height:50%;
+  width:50%;
+  margin: 10px;
  }
 
 .grid-item {
   position: relative;
   float: left;
-  width: 10px;
-  height: 10px;
+  width: 5%;
+  height: 5%;
   margin: 2px;
   padding: 2px;
   color: #262524;
+}
+
+#paint_list {
+  display:inline;
+}
+
+#paint_picks {
+@extend .blue;
+position: absolute;
+top: 30px;
+left: 300px;
+display:inline-block;
+min-width: 400px;
+margin: 30px;
+
+}
+
+.picked_paint {
+  display:inline-block;
+  // position:fixed;
+  margin: 5px;
+  width:125px;
+  height:125px;
+  @extend .z-depth-2;
 }

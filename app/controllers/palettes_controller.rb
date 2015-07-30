@@ -27,7 +27,13 @@ class PalettesController < ApplicationController
   end
 
   def edit
-    @palette = current_user.palettes(params[:id])
+    @palette = current_user.palettes.find(params[:id])
+    @paints  = Paint.all
+  end
+
+  def update
+    @palette = current_user.palettes.update(params[:id], palette_params)
+    redirect_to root_path
   end
 
 
