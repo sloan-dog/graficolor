@@ -11,7 +11,7 @@
             <%= render partial: 'shared/showpaints' %>
             <div id='paint_picks'></div>
             <div class="card-action">
-              <%= form_for(:palette, :url => palettes_path) do |f| %>
+              <%= form_for(:palette, :url => newpalette_path) do |f| %>
               <%= f.text_field :name, placeholder: 'Enter a name' %>
               <%= f.text_area :description, placeholder: 'Enter a description' %>
               <%= f.hidden_field :paintchoices, id: "hidden_field" %>

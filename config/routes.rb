@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'edit_palette/:id' => "palettes#edit", as: "edit_palettes"
 
-  post 'edit_palette/:id' => "palettes#update", as: "edit_palettes"
+  post 'edit_palette/:id' => "palettes#update"
 
   # get 'palettes/show'
 
