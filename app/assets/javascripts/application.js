@@ -56,9 +56,11 @@ $(window).load(function() {
   // filter functions
 
 
- $(".button-collapse").sideNav();
+  $(".button-collapse").sideNav();
+  // $(".dropdown-button").dropdown();
 
 });
+
 
 
 
