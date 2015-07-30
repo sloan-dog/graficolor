@@ -41,7 +41,8 @@ class PalettesController < ApplicationController
   end
 
   def destroy
-
+    @palette = current_user.palettes.find(params[:id]).destroy
+    redirect_to palettes_path
   end
 
   private

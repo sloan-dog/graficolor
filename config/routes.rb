@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   # get 'palettes/show'
 
-  # get 'palettes/destroy'
+  delete 'delete_palette/:id' => "palettes#destroy", as: "delete_palette"
 
 
   get 'login' => "sessions#new"
