@@ -20,6 +20,7 @@
   <% @paints.each do |paint| %>
     <div class="grid-item main" style="background-color: #<%= paint[:component1] %>" id="<%= paint[:id] %>">
     <p class='tracker hue'><%= paint.hex_hsv[0] %></p>
+    <p class='tracker name'><%= paint.name %></p>
     <p class='tracker saturation'><%= paint.hex_hsv[1] %></p>
     <p class='tracker value'><%= paint.hex_hsv[2] %></p>
     <p class='tracker brand'><%= paint.brand_id %></p>

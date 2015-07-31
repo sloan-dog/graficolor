@@ -12,6 +12,7 @@ class Paint < ActiveRecord::Base
     components = components.map { |component| component.to_i(16)}
     # puts components
 
+
     return components
   end
 

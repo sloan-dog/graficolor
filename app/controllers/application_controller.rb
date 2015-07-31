@@ -5,6 +5,13 @@ class ApplicationController < ActionController::Base
 
   before_action :current_user
 
+  def check_auth
+    unless current_user
+      flash[:warning] = "You must be logged in to access that page."
+      redirect_to login_path
+    end
+  end
+
   def is_authenticated?
     redirect_to login_path unless current_user
   end

@@ -1,5 +1,5 @@
 class PalettesController < ApplicationController
-
+ before_action :check_auth
 
   def new
     @palette = Palette.new
@@ -24,6 +24,7 @@ class PalettesController < ApplicationController
   def index
     @palettes = current_user.palettes.all
     # binding.pry
+    gon.palettes = @palettes
   end
 
   def edit
