@@ -21,6 +21,21 @@ $secondary-color: color("purple", "lighten-3") !default;
 $link-color: color("cyan", "lighten-3") !default;
 @import 'materialize';
 
+
+#sorts {
+  width: 80%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.container {
+  width: 90%;
+}
+
+p.tracker {
+  visibility: hidden;
+}
+
 .card a.btn {
   color:white;
 }
@@ -31,6 +46,12 @@ $link-color: color("cyan", "lighten-3") !default;
 
 .brand-logo {
   @extend .card-title;
+}
+
+.grid.main {
+  padding:5px;
+  width:99%;
+  height:800px;
 }
 
 .grid {
@@ -49,18 +70,21 @@ $link-color: color("cyan", "lighten-3") !default;
   color: #262524;
 }
 
+.grid-item.main {
+  height:50px;
+  width:50px;
+}
+
 #paint_list {
   display:inline;
 }
 
 #paint_picks {
-@extend .blue;
-position: absolute;
-top: 30px;
-left: 300px;
+position: relative;
 display:inline-block;
 min-width: 400px;
-margin: 30px;
+margin-left: 20%;
+margin-right: 20%;
 
 }
 
@@ -68,7 +92,7 @@ margin: 30px;
   display:inline-block;
   // position:fixed;
   margin: 5px;
-  width:125px;
-  height:125px;
+  width:30%;
+  height:80px;
   @extend .z-depth-1;
 }

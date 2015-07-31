@@ -22,6 +22,8 @@ gem 'gon'
 
 gem 'materialize-sass'
 
+gem 'color', '~> 1.7.1'
+
 # gem 'foundation-rails'
 
 # gem 'requirejs-rails'

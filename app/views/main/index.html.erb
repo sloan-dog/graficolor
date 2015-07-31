@@ -1,3 +1,20 @@
-<h1>HIIIIII</h1>
-<h2>You're home</h2>
-<%= render partial:'shared/showpaints' %>
+<h1>Welcome to Graficolor</h1>
+<div id="sorts" class="button-group">  <button class="button is-checked" data-sort-by="original-order">original order</button>
+  <button class="button" data-sort-by="hue">hue</button>
+  <button class="button" data-sort-by="symbol">symbol</button>
+  <button class="button" data-sort-by="number">number</button>
+  <button class="button" data-sort-by="weight">weight</button>
+  <button class="button" data-sort-by="category">category</button>
+</div>
+
+<div class="grid main">
+  <% @paints.each do |paint| %>
+    <div class="grid-item main" style="background-color: #<%= paint[:component1] %>" id="<%= paint[:id] %>">
+    <p class='tracker hue'><%= paint.hex_hsv[0] %></p>
+    <p class='tracker saturation'><%= paint.hex_hsv[1] %></p>
+    <p class='tracker value'><%= paint.hex_hsv[2] %></p>
+    <p class='tracker brand'><%= paint.brand_id %></p>
+    </div>
+  <% end %>
+</div>
+</div>

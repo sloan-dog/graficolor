@@ -1,6 +1,29 @@
-<div class="grid">
+
+<!-- <h2>Filter</h2>
+<div id="filters" class="button-group">  <button class="button is-checked" data-filter="*">show all</button>
+  <button class="button" data-filter=".metal">metal</button>
+  <button class="button" data-filter=".transition">transition</button>
+  <button class="button" data-filter=".alkali, .alkaline-earth">alkali and alkaline-earth</button>
+  <button class="button" data-filter=":not(.transition)">not transition</button>
+  <button class="button" data-filter=".metal:not(.transition)">metal but not transition</button>
+  <button class="button" data-filter="numberGreaterThan50">number > 50</button>
+  <button class="button" data-filter="ium">name ends with &ndash;ium</button>
+</div> -->
+<div id="sorts" class="button-group">
+  <button class="button is-checked waves-effect waves-light btn" data-sort-by="original-order">original order</button>
+  <button class="button waves-effect waves-light btn" data-sort-by="hue">hue</button>
+  <button class="button waves-effect waves-light btn" data-sort-by="symbol">saturation</button>
+  <button class="button waves-effect waves-light btn" data-sort-by="number">value</button>
+</div>
+
+<div class="grid main">
   <% @paints.each do |paint| %>
-    <div class="grid-item" style="background-color: #<%= paint[:component1] %>" id="<%= paint[:id] %>">
+    <div class="grid-item main" style="background-color: #<%= paint[:component1] %>" id="<%= paint[:id] %>">
+    <p class='tracker hue'><%= paint.hex_hsv[0] %></p>
+    <p class='tracker saturation'><%= paint.hex_hsv[1] %></p>
+    <p class='tracker value'><%= paint.hex_hsv[2] %></p>
+    <p class='tracker brand'><%= paint.brand_id %></p>
     </div>
   <% end %>
+</div>
 </div>

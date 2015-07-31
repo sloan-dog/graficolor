@@ -6,10 +6,10 @@
         <div class="col s12 m12">
           <div class="card grey darken-4">
             <div class="row grey z-depth-0">
+              <div id='paint_picks'></div>
               <span class="card-title">Color Choices</span>
             </div>
             <%= render partial: 'shared/showpaints' %>
-            <div id='paint_picks'></div>
             <div class="card-action">
               <%= form_for(:palette, :url => newpalette_path) do |f| %>
               <%= f.text_field :name, placeholder: 'Enter a name' %>
