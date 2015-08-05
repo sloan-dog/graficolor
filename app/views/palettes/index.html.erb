@@ -13,7 +13,7 @@
                 <% end %>
             </div>
             <div class="card-action">
-              <%= link_to "Edit", edit_palettes_path(palette.id), class: "waves-effect waves-light btn" %>
+              <%= link_to "Edit", edit_palettes_path(palette.id), :"data-no-turbolink" => true, class: "waves-effect waves-light btn" %>
               <%= link_to "Delete", delete_palette_path(palette.id), method: :delete, class: "waves-effect waves-light btn red" %>
             </div>
           </div>

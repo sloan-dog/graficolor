@@ -21,6 +21,10 @@ $secondary-color: color("purple", "lighten-3") !default;
 $link-color: color("cyan", "lighten-3") !default;
 @import 'materialize';
 
+.btn {
+
+}
+
 
 h2 {
   color: $primary-color;

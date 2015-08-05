@@ -1,5 +1,4 @@
-
-$(window).load(function() {
+$(document).ready(function() {
   // init Isotope
 
   // var $grid = $('.grid').isotope({
@@ -11,6 +10,7 @@ $(window).load(function() {
   // var $container = $('.isotope').isotope({
   //   itemSelector: '.element-item',
   //   layoutMode: 'fitRows',
+  setTimeout(function(){
   var $grid = $('.grid').isotope({
     itemSelector: '.grid-item',
     layoutMode: 'fitRows',
@@ -62,5 +62,7 @@ $(window).load(function() {
       $( this ).addClass('is-checked');
     });
   });
+
+},400)
 
 });

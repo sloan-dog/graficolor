@@ -35,9 +35,9 @@ $(window).load(function() {
           if (paints_picked.length < 3) {
               paints_picked.unshift(paint_values)
               createPaintDiv(paint_values[1])
-              if $('.picked_paint').count == 1
-              $('.picked_paint').attr('data-attribute',1)
-              $(this).find('.tracker.name')
+              // if $('.picked_paint').count == 1
+              // $('.picked_paint').attr('data-attribute',1)
+              // $(this).find('.tracker.name')
           } else if ((paints_picked.length > 2) && (paint_values[1] != paints_picked[0][1]) && (paint_values[1] != paints_picked[1][1]) && (paint_values[1] != paints_picked[2][1])) {
               paints_picked.pop()
               paints_picked.unshift(paint_values)
