@@ -46,6 +46,7 @@ $(document).ready(function() {
     // use filterFn if matches value
     filterValue = filterFns[ filterValue ] || filterValue;
     $grid.isotope({ filter: filterValue });
+    console.log($(this))
   });
 
   // bind sort button click
