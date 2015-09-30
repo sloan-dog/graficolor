@@ -6,7 +6,7 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-    <%= include_gon(:camel_case => true) %>
+<!-- <!     <%= include_gon(:camel_case => true) %> -->
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => false %>
     <%= csrf_meta_tags %>
