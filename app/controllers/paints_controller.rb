@@ -1,5 +1,5 @@
 class PaintsController < ApplicationController
-
+include gon
 
 gon.your_int = @your_int
   def index
