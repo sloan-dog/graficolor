@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.3'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+gem 'gon'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # tool to fix event based issues caused by turbo-links
@@ -22,7 +24,6 @@ gem 'rails_12factor', group: :production
 
 gem 'pry'
 
-gem 'gon'
 
 gem 'materialize-sass'
 
