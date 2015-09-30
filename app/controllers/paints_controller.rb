@@ -1,10 +1,9 @@
 class PaintsController < ApplicationController
-include gon
 
-gon.your_int = @your_int
+# gon.your_int = @your_int
   def index
     @paints = Paint.all
-    gon.paints = @paints
+    # gon.paints = @paints
   end
 
   def new

@@ -21,7 +21,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'rails_12factor', group: :production
 
-gem 'gon', '~> 4.1.1'
+# gem 'gon', '~> 4.1.1'
 
 gem 'pry'
 
