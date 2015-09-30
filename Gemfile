@@ -6,7 +6,6 @@ gem 'rails', '4.2.3'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-gem 'gon'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # tool to fix event based issues caused by turbo-links
@@ -21,6 +20,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'rails_12factor', group: :production
+
+gem 'gon', '~> 4.1.1'
 
 gem 'pry'
 

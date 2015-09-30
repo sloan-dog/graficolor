@@ -10,10 +10,10 @@
     <%= javascript_include_tag "application", 'data-turbolinks-track' => false %>
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <%= include_gon(:camel_case => true) %>
   </head>
 
   <body>
-  <%= include_gon(:camel_case => true) %>
   <%= render partial: 'shared/nav' %>
   <!-- <div class="preloader-wrapper big active">
     <div class="spinner-layer spinner-blue">
