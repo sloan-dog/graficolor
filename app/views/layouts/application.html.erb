@@ -9,11 +9,11 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => false %>
     <%= csrf_meta_tags %>
-    <%= include_gon(:camel_case => true) %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
+  <%= include_gon(:camel_case => true) %>
   <%= render partial: 'shared/nav' %>
   <!-- <div class="preloader-wrapper big active">
     <div class="spinner-layer spinner-blue">

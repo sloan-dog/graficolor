@@ -1,5 +1,6 @@
 class PaintsController < ApplicationController
 
+
 gon.your_int = @your_int
   def index
     @paints = Paint.all
