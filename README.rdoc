@@ -1,5 +1,5 @@
 == README
 A paint picker which scrapes spray paint sites for color data
-live link: http://graficolor.herokuapp.com/
+* live link: http://graficolor.herokuapp.com/
 
 
